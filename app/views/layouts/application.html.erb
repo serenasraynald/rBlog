@@ -27,12 +27,8 @@
             <li><%= link_to 'Contact', contact_path %></li>
           </ul>
 
-          <form class="search-form navbar-form navbar-right" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          <%= render 'partials/search' %>
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -58,12 +54,5 @@
       </div>
     </section>
 	<%= render 'partials/footer' %>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.js"></script>
   </body>
 </html>
