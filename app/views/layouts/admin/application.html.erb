@@ -27,12 +27,18 @@
             <li class="<%= params[:controller] == 'admin/users' ? 'active':'' %>"><%= link_to 'Users', admin_users_path %></li>
           </ul>
 
-          <form class="search-form navbar-form navbar-right" role="search">
+          <!-- <form class="search-form navbar-form navbar-right" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </form> -->
+          <%= form_tag(admin_posts_path, method:'get', id:'search-form', class:'search-form navbar-form navbar-right') do %>
+            <div class="form-group">
+              <%= text_field_tag :search, params[:search], placeholder: 'Search Posts', class:'form-control' %>
+            </div>
+            <%= submit_tag 'Search', name:nil, class:'btn btn-primary' %>
+          <% end %>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
