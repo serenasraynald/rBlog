@@ -33,12 +33,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form> -->
-          <%= form_tag(admin_posts_path, method:'get', id:'search-form', class:'search-form navbar-form navbar-right') do %>
-            <div class="form-group">
-              <%= text_field_tag :search, params[:search], placeholder: 'Search Posts', class:'form-control' %>
-            </div>
-            <%= submit_tag 'Search', name:nil, class:'btn btn-primary' %>
-          <% end %>
+          <%= render 'partials/admin/search' %>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
