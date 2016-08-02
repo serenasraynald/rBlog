@@ -1,3 +1,8 @@
+<script>
+  $(function() {
+    $('textarea#froala-editor').froalaEditor()
+  });
+</script>
 <h2>Add New Posts</h2>
 
 <%= form_for [:admin, @post] do |f| %>
@@ -35,7 +40,7 @@
 
 	<div class="form-group">
 		<%= f.label :body %>
-		<%= f.text_area :body ,class:'form-control' %>
+		<%= f.text_area :body ,class:'form-control', id:'froala-editor' %>
 	</div>
 	<%= f.submit "Submit", class:'btn btn-primary' %>
 	<%= link_to "Cancel", admin_posts_path, class:'btn btn-default' %>

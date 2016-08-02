@@ -39,6 +39,8 @@ gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 # Use for image upload
 gem "paperclip", "~> 5.0.0"
+# Use for text area to richtext area
+gem "wysiwyg-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
